@@ -29,8 +29,8 @@ $(document).ready(function () {
     // Saves the task to local storage when user clicks on the button
     $("button").on("click", function(event) {
         event.preventDefault()
-        var saveID = $(this).parent().attr("id")
-        var task = $("#" + saveID).children()[1].value
-        localStorage.setItem(saveID, task)
+        var savedID = $(this).parent().attr("id")
+        var task = $(this).prev().val()
+        localStorage.setItem(savedID, task)
     })
 })
